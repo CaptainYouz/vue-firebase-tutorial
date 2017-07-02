@@ -3,8 +3,8 @@
     <h3>Sign In</h3>
     <input type="text" placeholder="Email"><br>
     <input type="password" placeholder="Password"><br>
-    <button>Connection</button>
-    <p>You don't have an account ? You can create one</p>
+    <button v-on:click="signIn">Connection</button>
+    <p>You don't have an account ? You can <router-link to="/sign-up">create one</router-link></p>
   </div>
 </template>
 
@@ -14,7 +14,11 @@
     data: function() {
       return {}
     },
-    methods: {}
+    methods: {
+      signIn: function() {
+        this.$router.replace('hello')
+      }
+    }
   }
 </script>
 
