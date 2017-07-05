@@ -10,9 +10,12 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/hello',
-      name: 'Hello',
-      component: Hello
+      path: '*',
+      redirect: '/login'
+    },
+    {
+      path: '/',
+      redirect: '/login'
     },
     {
       path: '/login',
@@ -23,6 +26,14 @@ export default new Router({
       path: '/sign-up',
       name: 'SignUp',
       component: SignUp
+    },
+    {
+      path: '/hello',
+      name: 'Hello',
+      component: Hello,
+      meta: {
+        requiresAuth: true
+      }
     }
   ]
 })
