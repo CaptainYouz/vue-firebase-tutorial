@@ -7,21 +7,25 @@ import firebase from 'firebase'
 
 Vue.config.productionTip = false
 
-var config = {
     apiKey: "YOUR_API_KEY",
     authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
     databaseURL: "https://YOUR_PROJECT_ID.firebaseio.com",
     projectId: "YOUR_PROJECT_ID",
     storageBucket: "YOUR_PROJECT_ID.appspot.com",
     messagingSenderId: "YOUR_MESSAGING_SEND_ID"
+let app;
+let config = {
 };
 
 firebase.initializeApp(config)
-
-/* eslint-disable no-new */
-new Vue({
-  el: '#app',
-  router,
-  template: '<App/>',
-  components: { App }
-})
+firebase.auth().onAuthStateChanged(function(user) {
+  if (!app) {
+    /* eslint-disable no-new */
+    app = new Vue({
+      el: '#app',
+      template: '<App/>',
+      components: { App },
+      router
+    })
+  }
+});
