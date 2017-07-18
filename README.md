@@ -1,8 +1,10 @@
-# vue-firebase-tutorial
+# Vue 2 + Firebase: How to build a Vue app with Firebase authentication system in 15 minutes
 
-> A Vue.js project using Firebase for authentication.
+This repository contain the source code of my tutorial on Medium "Vue 2 + Firebase: How to build a Vue app with Firebase authentication system in 15 minutes"
 
-## Build Setup
+The different steps of the tutorial are break down by commits, so you can step by step checkout the corresponding code.
+
+### How to Use
 
 ``` bash
 # install dependencies
@@ -10,21 +12,4 @@ npm install
 
 # serve with hot reload at localhost:8080
 npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
 ```
-
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
