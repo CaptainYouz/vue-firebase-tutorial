@@ -1,6 +1,8 @@
 # Vue 2 + Firebase: How to build a Vue app with Firebase authentication system in 15 minutes
 
-![alt text](https://raw.githubusercontent.com/captainyouz/vue-firebase-tutorial/master/tutorial-logo.png)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/captainyouz/vue-firebase-tutorial/master/tutorial-logo.png"/>
+</p>
 
 This repository contain the source code of my tutorial on Medium "Vue 2 + Firebase: How to build a Vue app with Firebase authentication system in 15 minutes"
 
