@@ -15,5 +15,5 @@ The different steps of the tutorial are break down by commits, so you can step b
 npm install
 
 # serve with hot reload at localhost:8080
-npm run dev
+npm run serve
 ```
