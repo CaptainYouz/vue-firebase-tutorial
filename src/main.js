@@ -5,6 +5,7 @@ import router from './router';
 
 Vue.config.productionTip = false;
 
+let app = '';
 const config = {
   apiKey: 'YOUR_API_KEY',
   authDomain: 'YOUR_PROJECT_ID.firebaseapp.com',
@@ -16,7 +17,12 @@ const config = {
 
 firebase.initializeApp(config);
 
-new Vue({
-  router,
-  render: h => h(App)
-}).$mount('#app');
+firebase.auth().onAuthStateChanged(() => {
+  if (!app) {
+    /* eslint-disable no-new */
+    app = new Vue({
+      router,
+      render: h => h(App)
+    }).$mount('#app');
+  }
+});
