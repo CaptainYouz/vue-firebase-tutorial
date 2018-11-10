@@ -1,17 +1,21 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Home from './views/Home.vue';
-import Login from './views/Login.vue';
-import SignUp from './views/SignUp.vue';
+
+import Home from '@/views/Home';
+import Login from '@/views/Login';
+import SignUp from '@/views/SignUp';
 
 Vue.use(Router);
 
 export default new Router({
   routes: [
     {
-      path: '/home',
-      name: 'home',
-      component: Home
+      path: '*',
+      redirect: '/login'
+    },
+    {
+      path: '/',
+      redirect: '/login'
     },
     {
       path: '/login',
@@ -22,6 +26,14 @@ export default new Router({
       path: '/sign-up',
       name: 'SignUp',
       component: SignUp
+    },
+    {
+      path: '/home',
+      name: 'Home',
+      component: Home,
+      meta: {
+        requiresAuth: true
+      }
     }
   ]
 });
